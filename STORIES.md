@@ -1,5 +1,5 @@
 
-User Story 1: som en användare,vil jag gå mellan tre avdelning"catalog","add-book" och"my-books".
+User Story 1: som en användare vill jag gå mellan tre avdelning"catalog","add-book" och"my-books".
 
 User Story 2:  Som användare vill jag kunna lägga till en bok till mina favoriter från kataloglistan.
 
