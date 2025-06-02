@@ -16,8 +16,9 @@ test.describe('navigation mellan sidor', () => {
     await addBookButton.click();
 
     
-    const formTitle = page.getByText(/lägg till ny bok/i);
-    await expect(formTitle).toBeVisible({ timeout: 10000 });
+    const addNewBookButton = page.getByRole('button', { name: /lägg till ny bok/i });
+     await expect(addNewBookButton).toBeVisible({ timeout: 10000 });
+
 
 
 
@@ -29,11 +30,13 @@ test.describe('navigation mellan sidor', () => {
     await expect(emptyMessage).toBeVisible({ timeout: 10000 });
 
 
-	
+
     const katalogButton = page.locator('[data-testid="catalog"]');
     await expect(katalogButton).toBeEnabled();
     await katalogButton.click();
 
-    await expect(page.getByText(/katalog/i)).toBeVisible();
+   const books = page.locator('.book'); 
+    await expect(books.first()).toBeVisible();
+
   });
 });

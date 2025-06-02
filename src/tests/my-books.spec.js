@@ -44,10 +44,13 @@ test('visa bara de böcker som är favorit i "Mina böcker"', async ({ page }) =
   await expect(katalogButton).toBeEnabled({ timeout: 15000 });
   await katalogButton.click();
 
+
+
   const likeButton = page.getByTestId('star-Min stad');
   await expect(likeButton).toBeEnabled({ timeout: 15000 });
   await likeButton.click();
 
+  
   await page.waitForTimeout(1000);
 
   
