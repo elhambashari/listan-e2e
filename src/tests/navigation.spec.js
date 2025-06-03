@@ -9,7 +9,7 @@ test.describe('navigation mellan sidor', () => {
 
 
 
-  test('användare kan gå mellan tre avdelningarna: "katalog", "lägg till bok" och "mina böcker"', async ({ page }) => {
+  test('användare kan gå mellan tre vyer: "katalog", "lägg till bok" och "mina böcker"', async ({ page }) => {
     
     const addBookButton = page.getByRole('button', { name: /lägg till bok/i });
     await expect(addBookButton).toBeEnabled();
