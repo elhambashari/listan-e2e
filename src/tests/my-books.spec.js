@@ -50,7 +50,7 @@ test('visa bara de böcker som är favorit i "Mina böcker"', async ({ page }) =
   await expect(likeButton).toBeEnabled({ timeout: 15000 });
   await likeButton.click();
 
-  
+
   await page.waitForTimeout(1000);
 
   
