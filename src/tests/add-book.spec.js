@@ -18,14 +18,17 @@ test.describe('lägg till bok till katalog', () => {
 
 
   
-  test('användare vill kunna importera en ny bok och se den läggas till i kataloglistan.', async ({ page }) => {
+  test('Som användare vill jag kunna lägga till en ny bok och se den läggas till i listan', async ({ page }) => {
     const titleInput = page.getByTestId('add-input-title');
     await expect(titleInput).toBeVisible({ timeout: 15000 });
+
     await titleInput.fill('Min stad');
 
     const authorInput = page.getByTestId('add-input-author');
     await expect(authorInput).toBeVisible({ timeout: 15000 });
+
     await authorInput.fill('Adam Jonsson');
+
 
     const submitButton = page.getByRole('button', { name: /lägg till ny bok/i });
     await expect(submitButton).toBeEnabled({ timeout: 15000 });
