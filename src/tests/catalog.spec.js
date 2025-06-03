@@ -7,7 +7,7 @@ test.describe('katalog sidan', () => {
     await page.goto('https://tap-ht24-testverktyg.github.io/exam-template/');
   });
 
-  test('användare kan vara i katalog sidan och kan se vad finns  innehåler', async ({ page }) => {
+  test('Användaren kan gå till katalogsidan och se vad som finns där', async ({ page }) => {
     await expect(page.locator('text=Välkommen!')).toBeVisible({ timeout: 15000 });
     await expect(page.locator('text=Sidan för dig som gillar att läsa. Välj dina favoriter.')).toBeVisible({ timeout: 15000 });
 	
